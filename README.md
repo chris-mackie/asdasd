@@ -34,4 +34,4 @@ PUSHER_APP_CLUSTER=your_app_cluster
 - Sign into the app with different credentials (use the "Fill as User" button to fill the forms)
 - Send a message from one browser to the other
 - You should see the message appear in the other browser, may take a few seconds.
-- Voilà! You have a working example of Laravel with Vue and Pusher
+- Voilà! You have a working example of Pusher
