@@ -90,14 +90,14 @@ const submit = () => {
                     @click="userOne"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                    Fill User One
+                    Fill as User One
                 </button>
               <button
                   type="button"
                   @click="userTwo"
                   class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Fill User Two
+                Fill as User Two
               </button>
 
                 <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">

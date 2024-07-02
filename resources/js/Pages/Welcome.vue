@@ -62,7 +62,7 @@ const sendMessage = () => {
                 <div :class="[message.user.name === $page.props.auth?.user.name ? 'bg-green-50' : 'bg-white','flex items-center justify-between p-4 border rounded-md']">
                   <p class="text-sm">{{message.message}}</p>
                   <ChevronUpIcon
-                      :class="open ? 'rotate-180 transform' : ''"
+                      :class="!open ? 'rotate-180 transform' : ''"
                       class="h-5 w-5 text-gray-800"
                   />
                 </div>
