@@ -22,6 +22,14 @@ const form = useForm({
     remember: false,
 });
 
+const userOne = () => {
+  form.email = '1@example.com';
+  form.password = 'password';
+}
+const userTwo = () => {
+  form.email = '2@example.com';
+  form.password = 'password';
+}
 const submit = () => {
     form.post(route('login'), {
         onFinish: () => form.reset('password'),
@@ -76,14 +84,21 @@ const submit = () => {
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    v-if="canResetPassword"
-                    :href="route('password.request')"
+            <div class="flex gap-6 items-center justify-end mt-4">
+                <button
+                    type="button"
+                    @click="userOne"
                     class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                    Forgot your password?
-                </Link>
+                    Fill User One
+                </button>
+              <button
+                  type="button"
+                  @click="userTwo"
+                  class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Fill User Two
+              </button>
 
                 <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
